@@ -49,8 +49,14 @@ def dividir_texto(texto, tamanho_maximo=3000):
 
     return partes
 
-async def gerar_mp3_unico(texto, caminho_saida):
-    voz = "pt-BR-AntonioNeural"
+async def gerar_mp3_unico(
+    texto,
+    caminho_saida,
+    voz="pt-BR-AntonioNeural",
+    rate="+10%",
+    volume="+0%",
+    ao_processar_parte=None
+):
 
     partes = dividir_texto(texto)
 
@@ -60,12 +66,14 @@ async def gerar_mp3_unico(texto, caminho_saida):
     with open(caminho_saida, "wb") as arquivo_audio:
         for i, parte in enumerate(partes, start=1):
             print(f"Processando parte {i}/{len(partes)}...")
+            if ao_processar_parte:
+                ao_processar_parte(i, len(partes))
 
             comunicador = edge_tts.Communicate(
                 text=parte,
                 voice=voz,
-                rate="+10%",
-                volume="+0%"
+                rate=rate,
+                volume=volume
             )
 
             async for trecho in comunicador.stream():
@@ -109,4 +117,5 @@ async def main():
     print("Pronto! Áudio gerado com sucesso:")
     print(caminho_saida)
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
