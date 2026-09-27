@@ -2,6 +2,9 @@
 
 Este projeto permite converter texto em áudio de forma prática e gerar automaticamente um ficheiro de legendas no formato **SRT** com as respetivas marcações temporais.
 
+<img width="781" height="597" alt="image" src="https://github.com/user-attachments/assets/5267f3a8-e7e9-48ad-84bc-73411153d974" />
+
+
 ---
 
 ## 🚀 Funcionalidades
@@ -22,6 +25,11 @@ pip install -r requirements.txt
 ---
 
 ## 💻 Como Utilizar
+
+Execute o Arquivo **GeradorDeAudio.exe** que está dentro da pasta **Texto-para-audio-main**.
+
+Ou se preferir:
+
 1. Abra o projeto no seu editor de código preferido (como o VS Code).
 2. Insira o texto pretendido no script principal.
 3. Execute o programa através do terminal:
