@@ -33,9 +33,9 @@ Ou se preferir:
 1. Abra o projeto no seu editor de código preferido (como o VS Code).
 2. Insira o texto pretendido no script principal.
 3. Execute o programa através do terminal:
-   ```bash
+```bash
    python main.py
-   ```
+```
 4. O áudio gerado e o ficheiro `.srt` correspondente ficarão disponíveis na pasta do projeto.
 
 ---
