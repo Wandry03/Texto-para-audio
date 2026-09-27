@@ -1,4 +1,4 @@
-# Texto para Áudio & Gerador de SRT 🎙️📄
+# Texto para Áudio & Gerador de SRT 📄
 
 Este projeto permite converter texto em áudio de forma prática e gerar automaticamente um ficheiro de legendas no formato **SRT** com as respetivas marcações temporais.
 
